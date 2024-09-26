@@ -1,0 +1,21 @@
+// ---------------------------------------------
+// Testar serviço de atualização de preços em dólar
+// ---------------------------------------------
+
+// Atualizar preços dos produtos com a cotação do dólar
+PUT http://127.0.0.1:5000/produto/atualizar_preco_dolar
+Content-Type: application/json
+// OBS: É necessário pular uma linha, quando existir um corpo (body)
+
+// Neste caso, não há corpo para a requisição, pois a atualização é feita com base na cotação atual do dólar.
+###
+
+// Consultar cotação do dólar
+GET http://127.0.0.1:5000/dolar/cotacao
+Content-Type: application/json
+###
+
+// Listar todos os produtos após a atualização
+GET http://127.0.0.1:5000/produto
+Content-Type: application/json
+###
